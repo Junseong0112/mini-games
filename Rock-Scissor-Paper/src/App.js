@@ -2,6 +2,7 @@ import { useState } from 'react'
 import HandButton from './HandButton'
 import Button from './Button';
 import HandIcon from './HandIcon';
+import Score from './Score';
 import { compareHand, generateRandomHand } from './utils';
 
 // 서로의 초기값이 같아 상수로 따로 저장해 추후에 수정시 용이함 
@@ -66,12 +67,11 @@ function App() {
   }
   
   return (
-    <div> 
+    <div className='App'> 
       {/* handleClearClick 함수를 실행 */}
-      <Button onClick={handleClearClick}>처음부터</Button> 
-      <div>
-        {score} : {otherScore}
-      </div>
+      <h1 className='App-heading'>가위 바위 보</h1>
+      <Button onClick={handleClearClick}></Button> 
+      <Score score={score} otherScore={otherScore} />
       <div>
         {/* paper */}
         <HandIcon value={hand} />
