@@ -8,11 +8,11 @@ const RANDOMIMGS = {
   paper : paperImg,
 };
 
-function HandIcon ( { value } ){
+function HandIcon ( { value, className = '' } ){
   const src = RANDOMIMGS[value];
 
   return (
-    <img src={src} alt={value} />
+    <img className = {className} src={src} alt={value} />
   )
 }
 

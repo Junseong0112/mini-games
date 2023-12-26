@@ -1,22 +1,9 @@
-const baseButtonstyle = {
-  padding : '14px 27px',
-  borderRadius : '30px',
-  outline : 'none',
-}
-const redButton = {
-  ...baseButtonstyle,
-  backgroundColor : 'red',
-}
+import './Button.css'
 
-const blueButton = {
-  ...baseButtonstyle,
-  backgroundColor : 'blue',
-}
-
-function Button ( { children , onClick , color} ){
-  const style = color === 'red' ? redButton : blueButton
+function Button ( { children , onClick , color = 'blue', className = '' } ){
+  const classNames = `Button ${color} ${className}`;
   return (
-    <button style={style} onClick={onClick}>
+    <button className={classNames} onClick={onClick}>
       {children}
     </button>
   )
