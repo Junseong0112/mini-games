@@ -2,7 +2,7 @@
 ---
 <p align = "center">
   <br>
-    <img src = './images/main-project.png'>
+    ![Screenshot 2023-12-27 at 7 57 29 PM](https://github.com/Junseong0112/mini-games/assets/108931006/9297787c-dc44-4cad-9cdf-2d7fd4aa917d)
   <br>
 </p>
 
@@ -24,7 +24,7 @@
 ---
 <p align = "center">
   <br>
-    <img src = './images/project.gif'>
+    ![project](https://github.com/Junseong0112/mini-games/assets/108931006/3c8d3f7c-c3fa-46c1-9646-30404fe4b78f)
   <br>
 </p>
 
