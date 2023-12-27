@@ -18,7 +18,7 @@
 ---
 | JavaScript |   React  |
 | :--------: | :------: |
-|   ![js]    | ![react] |
+|   ![javascript](https://github.com/Junseong0112/mini-games/assets/108931006/bc682460-d9fb-4849-b3df-4698b65f2bab)    | ![react](https://github.com/Junseong0112/mini-games/assets/108931006/7516e828-9677-4cf6-9323-b481cd9ed9df) |
 
 ## 시연 영상
 ---
@@ -31,6 +31,3 @@
 ## 배포 사이트
 ---
 <https://rock-scissor-paper-games.netlify.app>
-
-[js]: /images/javascript.svg
-[react]: /images/react.svg
