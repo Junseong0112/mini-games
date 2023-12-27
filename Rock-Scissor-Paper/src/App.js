@@ -5,6 +5,7 @@ import HandIcon from './HandIcon';
 import Score from './Score';
 import { compareHand, generateRandomHand } from './utils';
 import './styles/App.css'
+import Modal from './Modal';
 
 // 서로의 초기값이 같아 상수로 따로 저장해 추후에 수정시 용이함 
 const INITIAL_VALUE = 'rock';
@@ -28,6 +29,13 @@ function App() {
   const [score, setScore] = useState(0);
   const [otherScore, setOtherScore] = useState(0);
   const [bet, setBet] = useState(1);
+  const [showModal, setShowModal] = useState(true);
+
+  // 모달
+
+  const closeModal = () => {
+    setShowModal(false)
+  }
 
   const handleButtonClick = (nextHand) => {
     // utils.js에 있는 generateRandomHand 함수 상수에 저장
@@ -84,6 +92,7 @@ function App() {
   
   return (
     <div id='App'>
+      {showModal && <Modal closeModal={closeModal} />}
       <main id='Main'>
         {/* handleClearClick 함수를 실행 */}
         <header className='App-header'>
