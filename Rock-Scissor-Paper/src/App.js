@@ -75,20 +75,28 @@ function App() {
         <Button className='App-reset' onClick={handleClearClick}></Button> 
       </header>
       <Score score={score} otherScore={otherScore} />
-      <section>
-        <div>
-          {/* paper */}
-          <HandIcon value={hand} />
-          <p>VS</p>
-          {/* scissor */}
-          <HandIcon value={otherHand} />
-        </div>
-        <div>
-          <input type='number' value={bet} min={1} max={9} onChange={handleBetChange} />
-        </div>
-        <div>
-          <h3>승부 기록</h3>
-          <p>{gameHistroy.join(', ')}</p>
+      <section className='App-borads'>
+        <div className='Box-inner'>
+          <div className='Borads-inner'>
+            {/* paper */}
+            <div className='Hand'>
+              <HandIcon value={hand} />
+            </div>
+            <p className='Borads-vs'>VS</p>
+            {/* scissor */}
+            <div className='Hand'>
+              <HandIcon value={otherHand} />
+            </div>
+          </div>
+          <div className='Borads-inputs'>
+            <span>배점</span>
+            <input type='number' value={bet} step={1} min={1} max={9} onChange={handleBetChange} />
+            <span>배</span>
+          </div>
+          <div className='Borads-result'>
+            <h3>승부 기록</h3>
+            <p>{gameHistroy.join(', ')}</p>
+          </div>
         </div>
       </section>
       <div>

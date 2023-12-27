@@ -7,8 +7,8 @@
   padding: 3.125rem;
   border-radius: 44px;
   text-align: center;
-  background: #e8b1b1;
-  box-shadow: 0 4.2px 2px #bfa3a3, 0 -4.2px 2px #f2a4a4;
+  background: #fd7dbd;
+  box-shadow: 0 4.2px 2px #FF69B4, 0 -4.2px 2px #fbb6e9;
 }
 
 .App-header{
@@ -24,7 +24,7 @@
   font-weight: 700;
   font-size: 1.875rem;
   text-align: center;
-  text-shadow: 0 3px 0 #f97f7f;
+  text-shadow: 0 3px 0 #FF69B4;
   letter-spacing: 0.19px;
   -webkit-text-stroke: 1px #fff;
 }
@@ -44,4 +44,78 @@
 }
 .App-reset img:hover{
   transform: scale(1.1);
+}
+
+/*  */
+.App-borads{
+  margin: 1rem 0;
+  padding: 5px;
+  box-shadow: 0 0 8px 0 rgba(255, 255, 255, 0.67);
+}
+.Box-inner {
+  /* box-shadow: inset 0 1px 2px 0 rgba(255, 255, 255, 0.8); */
+  background-color: #ff9fcf;
+  padding: .625rem 0;
+}
+.Borads-inner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Borads-inner .Hand{
+  width: 12.9375rem;
+  height: 12.9375rem;
+  text-align: center;
+  background: url(../assets/pink.svg) no-repeat 50% / contain;
+}
+.Borads-inner .Hand > img{
+  opacity: 0.87;
+  width: 4.375rem;
+  height: 4.375rem;
+  margin: 4.375rem auto 0;
+}
+.Borads-inner .Borads-vs{
+  font-size: 2.125rem;
+  font-weight: 800;
+}
+
+.Hand.winner {
+  background-image: url(../assets/pink-win.svg);
+}
+
+.Borads-inputs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .3125rem;
+}
+.Borads-inputs > input{
+  width: 6.25rem;
+  padding: .4375rem .625rem;
+  border : 2px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  background-color: #FF69B4;
+  font-size: 1.0625rem;
+}
+.Borads-inputs > span{
+  font-size: 1.0625rem;
+}
+.Borads-result {
+  width: 90%;
+  min-height: 9.375rem;
+  margin: .625rem auto;
+  padding: .9375rem 1.25rem .625rem;
+  background-color: #fff;
+  border-radius: 1.25rem;
+  border: 1px solid #efefef;
+  box-shadow: 0 3px 8px 0 rgba(255, 110, 192, 0.44), 0 5px 3px rgba(215, 189, 248, 0.65);
+}
+.Borads-result > h3{
+  color: #FF69B4;
+  margin: 0 0 .625rem;
+}
+.Borads-result > p{
+  color: #999;
 }

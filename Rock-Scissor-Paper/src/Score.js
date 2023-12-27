@@ -14,14 +14,14 @@ const ScoreAtricle = styled.article`
 const ScoreBox = styled.div`
   width: 6.25rem;
   height: 6.25rem;
-  background-color: #f97f7f;
+  background-color: #FF69B4;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: .625rem;
   border-radius: 20px;
-  box-shadow: inset 0px -2px 5px 1px #9c4e4e, 0px 2px 5px #944e4e;
+  box-shadow: inset 0px -2px 5px 1px #FF66B4, 0px 2px 5px #Fd69B4;
 
   >h2{
     font-size: 2rem;

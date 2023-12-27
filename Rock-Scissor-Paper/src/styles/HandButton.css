@@ -15,6 +15,7 @@
   opacity: 0.45;
   width: 55px;
   height: 55px;
+  transition: .3s;
 }
 .HandButton:hover{
   background-image: url(../assets/pink.svg);
