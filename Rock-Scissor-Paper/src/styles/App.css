@@ -1,10 +1,19 @@
 #App{
+  min-width: 35.9375rem;
+  width: 45rem;
+  margin: 2.8125rem auto;
+}
+
+.Haeder-text{
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 0 0 .9375rem;
+}
+
+#Main{
   position: relative;
   width: 100%;
-  min-width: 35.9375rem;
-  max-width: 45rem;
-  margin: 2.8125rem auto;
-  padding: 3.125rem;
+  padding: 3.125rem 4.375rem;
   border-radius: 44px;
   text-align: center;
   background: #fd7dbd;
