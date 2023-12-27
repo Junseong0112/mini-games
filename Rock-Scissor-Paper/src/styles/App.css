@@ -1,0 +1,47 @@
+#App{
+  position: relative;
+  width: 100%;
+  min-width: 35.9375rem;
+  max-width: 45rem;
+  margin: 2.8125rem auto;
+  padding: 3.125rem;
+  border-radius: 44px;
+  text-align: center;
+  background: #e8b1b1;
+  box-shadow: 0 4.2px 2px #bfa3a3, 0 -4.2px 2px #f2a4a4;
+}
+
+.App-header{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin: 0 0 2.125rem;
+}
+
+.App-heading {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.875rem;
+  text-align: center;
+  text-shadow: 0 3px 0 #f97f7f;
+  letter-spacing: 0.19px;
+  -webkit-text-stroke: 1px #fff;
+}
+
+.App-reset {
+  position: absolute;
+  right: 0;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.App-reset img{
+  width: 3.125rem;
+  height: 3.125rem;
+  transition: .2s;
+}
+.App-reset img:hover{
+  transform: scale(1.1);
+}

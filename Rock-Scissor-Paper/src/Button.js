@@ -1,8 +1,8 @@
 import Reset from './assets/ic-reset.svg'
 
-function Button ({ onClick }) {
+function Button ({ className, onClick }) {
   return (
-    <button onClick={onClick}><img src={Reset} alt='Rest' /></button>
+    <button className={className} onClick={onClick}><img src={Reset} alt='Rest' /></button>
   )
 };
 

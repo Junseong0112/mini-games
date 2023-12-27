@@ -1,5 +1,5 @@
 import HandIcon from "./HandIcon";
-import './HandButton.css'
+import './styles/HandButton.css'
 
 function HandButton ({ value, onClick}) {
   const handleClick = () => onClick(value);

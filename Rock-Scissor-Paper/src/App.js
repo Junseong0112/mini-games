@@ -4,6 +4,7 @@ import Button from './Button';
 import HandIcon from './HandIcon';
 import Score from './Score';
 import { compareHand, generateRandomHand } from './utils';
+import './styles/App.css'
 
 // 서로의 초기값이 같아 상수로 따로 저장해 추후에 수정시 용이함 
 const INITIAL_VALUE = 'rock';
@@ -67,22 +68,29 @@ function App() {
   }
   
   return (
-    <div className='App'> 
+    <div id='App'> 
       {/* handleClearClick 함수를 실행 */}
-      <h1 className='App-heading'>가위 바위 보</h1>
-      <Button onClick={handleClearClick}></Button> 
+      <header className='App-header'>
+        <h1 className='App-heading'>가위 바위 보</h1>
+        <Button className='App-reset' onClick={handleClearClick}></Button> 
+      </header>
       <Score score={score} otherScore={otherScore} />
-      <div>
-        {/* paper */}
-        <HandIcon value={hand} />
-        VS
-        {/* scissor */}
-        <HandIcon value={otherHand} />
-      </div>
-      <div>
-        <input type='number' value={bet} min={1} max={9} onChange={handleBetChange} />
-      </div>
-      <p>승부 기록 : {gameHistroy.join(', ')}</p>
+      <section>
+        <div>
+          {/* paper */}
+          <HandIcon value={hand} />
+          <p>VS</p>
+          {/* scissor */}
+          <HandIcon value={otherHand} />
+        </div>
+        <div>
+          <input type='number' value={bet} min={1} max={9} onChange={handleBetChange} />
+        </div>
+        <div>
+          <h3>승부 기록</h3>
+          <p>{gameHistroy.join(', ')}</p>
+        </div>
+      </section>
       <div>
         <HandButton value='rock' onClick = {handleButtonClick} />
         <HandButton value='scissor' onClick = {handleButtonClick} />

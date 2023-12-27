@@ -5,7 +5,7 @@
   outline: none;
   text-align: center;
   cursor: pointer;
-  background: url(./assets/lavender.svg) no-repeat center / contain transparent;
+  background: url(../assets/lavender.svg) no-repeat center / contain transparent;
   /* 컬러는 맨 마지막 */
   /* background-color: transparent; */
   /* 사이즈는 포지션 뒤에 / 를 사용해서 적을 수 있다 */
@@ -17,7 +17,7 @@
   height: 55px;
 }
 .HandButton:hover{
-  background-image: url(./assets/pink.svg);
+  background-image: url(../assets/pink.svg);
 }
 .HandButton:hover .HandButton-icon{
   opacity: 1;
