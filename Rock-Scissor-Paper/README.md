@@ -1,10 +1,6 @@
 # 가위 바위 보
 ---
-<p align = "center">
-  <br>
-    ![Screenshot 2023-12-27 at 7 57 29 PM](https://github.com/Junseong0112/mini-games/assets/108931006/9297787c-dc44-4cad-9cdf-2d7fd4aa917d)
-  <br>
-</p>
+![main-project](https://github.com/Junseong0112/mini-games/assets/108931006/42317c6e-103d-43ea-8d7c-2ec5aecd746a)
 
 # 소개
 ---
@@ -22,11 +18,7 @@
 
 ## 시연 영상
 ---
-<p align = "center">
-  <br>
-    ![project](https://github.com/Junseong0112/mini-games/assets/108931006/3c8d3f7c-c3fa-46c1-9646-30404fe4b78f)
-  <br>
-</p>
+![project](https://github.com/Junseong0112/mini-games/assets/108931006/ea54ea99-2b5c-4d53-b008-a6e94c0b65d0)
 
 ## 배포 사이트
 ---
