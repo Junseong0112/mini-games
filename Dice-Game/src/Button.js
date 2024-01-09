@@ -1,4 +1,4 @@
-import './Button.css'
+import './styles/Button.css'
 
 function Button ( { children , onClick , color = 'orange', className = '' } ){
   const classNames = `Button ${color} ${className}`;

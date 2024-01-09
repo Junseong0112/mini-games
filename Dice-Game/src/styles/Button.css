@@ -1,0 +1,18 @@
+.Button {
+  padding: 14px 27px;
+  border-radius: 9999px;
+  outline: none;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.Button.orange{
+  background-color: rgba(251, 158, 85, 0.2);
+  border: 1px solid #FB9E55;
+  color: #FB9E55;
+}
+.Button.green{
+  background-color: rgba(130, 191, 0, 0.2);
+  border: 1px solid #82BF00;
+  color: #82BF00;
+}
