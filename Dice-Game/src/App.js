@@ -32,7 +32,7 @@ function App () {
         <Button className="App-button" color='orange' onClick ={handleRollClick}>던지기</Button>
         <Button className="App-button" color='green' onClick ={handleClearClick}>다시하기</Button>
       </article>
-      <div>
+      <div className="Board-box">
         <Board name ='나' color='orange' gameHistory={myHistory}/>
         <Board name ='상대' color='green' gameHistory={otherHistory}/>
       </div>
