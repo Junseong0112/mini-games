@@ -27,12 +27,12 @@ function App () {
     
     <div className="App">
       <div>
-        <Button className="App-button" color='blue' onClick ={handleRollClick}>던지기</Button>
-        <Button className="App-button" color='red' onClick ={handleClearClick}>처음부터</Button>
+        <Button className="App-button" color='orange' onClick ={handleRollClick}>던지기</Button>
+        <Button className="App-button" color='green' onClick ={handleClearClick}>다시하기</Button>
       </div>
       <div>
-        <Board name ='나' color='blue' gameHistory={myHistory}/>
-        <Board name ='상대' color='red' gameHistory={otherHistory}/>
+        <Board name ='나' color='orange' gameHistory={myHistory}/>
+        <Board name ='상대' color='green' gameHistory={otherHistory}/>
       </div>
     </div>
   )

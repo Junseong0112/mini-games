@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
     <g fill="none" fill-rule="evenodd">
         <g>
-            <g transform="translate(-48 -265) translate(48 265)">
-                <rect width="120" height="120" fill="#FF4664" fill-opacity=".3" rx="28"/>
-                <circle cx="60" cy="60" r="57" fill="#FF4664" stroke="#FF7C91"/>
+            <g transform="translate(-48 -105) translate(48 105)">
+                <rect width="120" height="120" fill="#FB9E55" fill-opacity=".3" rx="28"/>
+                <circle cx="60" cy="60" r="57" fill="#FB9E55" stroke="#FB9E77"/>
                 <circle cx="60.5" cy="60.5" r="8.5" fill="#FFF"/>
             </g>
         </g>

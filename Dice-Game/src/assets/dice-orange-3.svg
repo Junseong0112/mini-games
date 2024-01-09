@@ -2,10 +2,11 @@
     <g fill="none" fill-rule="evenodd">
         <g>
             <g>
-                <g transform="translate(-174 -265) translate(48 265) translate(126)">
-                    <rect width="120" height="120" fill="#FF4664" fill-opacity=".3" rx="28"/>
-                    <circle cx="60" cy="60" r="57" fill="#FF4664" stroke="#FF7C91"/>
+                <g transform="translate(-300 -105) translate(48 105) translate(252)">
+                    <rect width="120" height="120" fill="#FB9E55" fill-opacity=".3" rx="28"/>
+                    <circle cx="60" cy="60" r="57" fill="#FB9E55" stroke="#FB9E77"/>
                     <circle cx="40.5" cy="77.5" r="8.5" fill="#FFF"/>
+                    <circle cx="60.5" cy="60.5" r="8.5" fill="#FFF"/>
                     <circle cx="79.5" cy="42.5" r="8.5" fill="#FFF"/>
                 </g>
             </g>
