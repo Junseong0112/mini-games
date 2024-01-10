@@ -1,11 +1,24 @@
 section{
+  width: 45%;
   display: flex;
   flex-direction: column;
   gap: 20px;
   margin: .625rem 0;
-  padding: 1.25rem 3.125rem;
-  border: 1px solid #191919;
+  padding: 1.25rem .9375rem;
+  border: 1px solid #b1b1b1;
   border-radius: 20px;
-  box-shadow: 0 4px 4px rgba(0,0,0,0.2),
-  0 -2px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 4px rgba(54, 54, 54, 0.2),
+  0 -2px 2px rgba(90, 90, 90, 0.2);
+}
+article > h2 {
+  margin: 0 0 .9375rem;
+}
+.score-sec > p{
+  font-size: 1.25rem;
+}
+.history-sec{
+  min-height: 12.5rem;
+}
+.history-sec > p{
+  font-size: 1.0625rem;
 }

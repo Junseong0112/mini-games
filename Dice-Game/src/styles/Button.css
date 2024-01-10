@@ -10,9 +10,19 @@
   background-color: rgba(251, 158, 85, 0.2);
   border: 1px solid #FB9E55;
   color: #FB9E55;
+  transition: .3s;
+}
+.Button.orange:hover{
+  background-color: #FB9E55;
+  color: #fff;
 }
 .Button.green{
   background-color: rgba(130, 191, 0, 0.2);
   border: 1px solid #82BF00;
   color: #82BF00;
+  transition: .3s;
+}
+.Button.green:hover{
+  background-color: #82BF00;
+  color: #fff;
 }

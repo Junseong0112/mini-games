@@ -1,10 +1,10 @@
 .App{
-  max-width: 46.875rem;
+  width: 40.625rem;
   min-width: 28.125rem;
   text-align: center;
   border: 2px solid #e8e8e8;
   border-radius: 35px;
-  padding: 5rem 3.125rem;
+  padding: 5rem .625rem;
   box-shadow: 0 4px 4px rgba(0,0,0,0.2);
 }
 .App .App-button{
@@ -12,7 +12,9 @@
 }
 
 .Board-box{
+  width: 90%;
   display: flex;
   gap: 35px;
-  justify-content: center;
+  justify-content: space-between;
+  margin: 1.25rem auto 0;
 }
