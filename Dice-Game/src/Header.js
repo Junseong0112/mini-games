@@ -1,11 +1,12 @@
 import Logo from "./assets/lol.svg";
-import './styles/Header.css'
+import "./styles/Header.css";
 
-function Header() {
+function Header({ winner }) {
   return (
     <header>
+      <h1>{winner}</h1>
       <img src={Logo} alt="logo" />
-      <h1>주사위 게임</h1>
+      <h2>주사위 게임</h2>
     </header>
   );
 }

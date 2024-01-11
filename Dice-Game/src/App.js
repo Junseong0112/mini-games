@@ -8,6 +8,7 @@ function random(n) {
   return Math.ceil(Math.random() * n);
 };
 function App () {
+  const [winner, setWinner] = useState('게임에서 이겨보세요!')
   const [myHistory, setMyHistory] = useState([]);
   const [otherHistory, setOtherHistory] = useState([]);
 
@@ -27,7 +28,7 @@ function App () {
   return (
     
     <div className="App">
-      <Header />
+      <Header winner={winner} />
       <article>
         <Button className="App-button" color='orange' onClick ={handleRollClick}>던지기</Button>
         <Button className="App-button" color='green' onClick ={handleClearClick}>다시하기</Button>
