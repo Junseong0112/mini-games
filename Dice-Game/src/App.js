@@ -3,6 +3,9 @@ import Button from "./Button"
 import {useState} from 'react'
 import './styles/App.css'
 import Header from "./Header";
+import Basic from './assets/basic.png';
+import Win from './assets/win.png';
+import Lose from './assets/lose.png'
 
 function random(n) {
   return Math.ceil(Math.random() * n);
@@ -12,6 +15,7 @@ function App () {
   const [myHistory, setMyHistory] = useState([]);
   const [otherHistory, setOtherHistory] = useState([]);
   const [disableClick, setDisableClick] = useState(false);
+  const [imgUrl, setImgUrl] = useState(Basic)
 
   const handleRollClick = () => {
     const nextMyNum = random(6);
@@ -24,9 +28,11 @@ function App () {
     if(myNewSum >= 50){
       setWinner('승리하셨습니다!')
       setDisableClick(true)
+      setImgUrl(Win)
     }else if(otherNewSum >= 50){
       setWinner('패배하셨습니다!')
       setDisableClick(true)
+      setImgUrl(Lose)
     }
 
     setMyHistory([...myHistory, nextMyNum]);
@@ -38,12 +44,13 @@ function App () {
     setOtherHistory([]);
     setWinner('게임에서 이겨보세요!')
     setDisableClick(false)
+    setImgUrl(Basic)
   }
 
   return (
     
     <div className="App">
-      <Header winner={winner} />
+      <Header winner={winner} imgUrl={imgUrl}/>
       <article>
         <Button className="App-button" color='orange' onClick ={handleRollClick} disableClick={disableClick}>던지기</Button>
         <Button className="App-button" color='green' onClick ={handleClearClick}>다시하기</Button>

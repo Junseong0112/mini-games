@@ -6,9 +6,7 @@ header{
   gap: 1.25rem;
 }
 header > img{
-  width: 12.5rem;
-  height: 12.5rem;
-  object-fit: cover;
+  width: 9.375rem;
 }
 
 header > h1{
