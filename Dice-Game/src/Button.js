@@ -1,9 +1,9 @@
 import './styles/Button.css'
 
-function Button ( { children , onClick , color = 'orange', className = '' } ){
+function Button ( { children , onClick , color = 'orange', className = '' , disableClick} ){
   const classNames = `Button ${color} ${className}`;
   return (
-    <button className={classNames} onClick={onClick}>
+    <button disabled={disableClick} className={classNames} onClick={onClick}>
       {children}
     </button>
   )
