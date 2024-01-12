@@ -16,6 +16,8 @@ function App () {
   const [otherHistory, setOtherHistory] = useState([]);
   const [disableClick, setDisableClick] = useState(false);
   const [imgUrl, setImgUrl] = useState(Basic)
+  const [winCondition, setWinCondition] = useState(1);
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   const handleRollClick = () => {
     const nextMyNum = random(6);
@@ -24,6 +26,10 @@ function App () {
     const otherNewHistory = [...otherHistory, nextOtherNum];
     const myNewSum = myNewHistory.reduce((acc, cur) => acc + cur, 0);
     const otherNewSum = otherNewHistory.reduce((acc, cur) => acc + cur, 0);
+
+
+    setMyHistory([...myHistory, nextMyNum]);
+    setOtherHistory([...otherHistory, nextOtherNum])
 
     if(myNewSum >= 50){
       setWinner('승리하셨습니다!')
@@ -34,9 +40,6 @@ function App () {
       setDisableClick(true)
       setImgUrl(Lose)
     }
-
-    setMyHistory([...myHistory, nextMyNum]);
-    setOtherHistory([...otherHistory, nextOtherNum])
   }
 
   const handleClearClick = () => {
