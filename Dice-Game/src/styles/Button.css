@@ -26,3 +26,14 @@
   background-color: #82BF00;
   color: #fff;
 }
+
+.Button.gray{
+  background-color: #fff;
+  border: 1px solid #828282;
+  color: #aaa;
+  transition: .3s;
+}
+.Button.gray:hover{
+  background-color: #828282;
+  color: #fff;
+}

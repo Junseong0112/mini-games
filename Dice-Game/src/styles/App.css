@@ -1,4 +1,11 @@
 .App{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.App > main{
   width: 40.625rem;
   min-width: 28.125rem;
   text-align: center;
@@ -7,7 +14,8 @@
   padding: 5rem .625rem;
   box-shadow: 0 4px 4px rgba(0,0,0,0.2);
 }
-.App > article{
+
+.App > main > article{
   margin: 1.25rem 0;
 }
 .App .App-button{
