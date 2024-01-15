@@ -6,17 +6,17 @@
 
 }
 .App > main{
-  width: 40.625rem;
+  width: 31.25rem;
   min-width: 28.125rem;
   text-align: center;
   border: 2px solid #e8e8e8;
   border-radius: 35px;
-  padding: 5rem .625rem;
+  padding: 1.875rem .625rem;
   box-shadow: 0 4px 4px rgba(0,0,0,0.2);
 }
 
 .App > main > article{
-  margin: 1.25rem 0;
+  margin: .625rem 0;
 }
 .App .App-button{
   margin: 6px;
@@ -25,7 +25,7 @@
 .Board-box{
   width: 90%;
   display: flex;
-  gap: 35px;
+  gap: .9375rem;
   justify-content: space-between;
   margin: 0 auto;
 }

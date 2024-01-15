@@ -11,14 +11,18 @@ section{
   0 -2px 2px rgba(90, 90, 90, 0.2);
 }
 article > h2 {
-  margin: 0 0 .9375rem;
+  margin: 0 0 .625rem;
+  font-size: 1.125rem;
+}
+.header-sec > img{
+  width: 6.25rem;
 }
 .score-sec > p{
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 .history-sec{
-  min-height: 12.5rem;
+  min-height: 100px;
 }
 .history-sec > p{
-  font-size: 1.0625rem;
+  font-size: 1rem;
 }

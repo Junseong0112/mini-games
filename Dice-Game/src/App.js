@@ -1,6 +1,6 @@
 import Board from "./Board";
 import Button from "./Button"
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 import './styles/App.css'
 import Header from "./Header";
 import Basic from './assets/basic.png';
@@ -33,7 +33,6 @@ function App () {
     setOtherHistory([...otherHistory, nextOtherNum])
 
     if(winCondition === 1){
-      setDescript('50점을 먼저 달성하세요')
       if(myNewSum >= 50){
         setWinner('승리하셨습니다!')
         setDisableClick(true)
@@ -44,7 +43,6 @@ function App () {
         setImgUrl(Lose)
       }
     }else if(winCondition === 2){
-      setDescript('1부터 6까지 먼저 모아보세요')
       if(new Set(myNewHistory).size === 6){
         setWinner('승리하셨습니다!')
         setDisableClick(true)
@@ -69,9 +67,16 @@ function App () {
   const handleOptionChange = (option) => {
     setWinCondition(option);
     setIsModalOpen(false)
+    setDisableClick(false)
     setMyHistory([])
     setOtherHistory([])
     setWinner('게임에서 이겨보세요!')
+
+    if(option === 1){
+      setDescript('50점을 먼저 달성하세요')
+    }else if(option === 2){
+      setDescript('1부터 6까지 먼저 모아보세요')
+    }
   }
 
   const openModal = () => {
@@ -82,9 +87,13 @@ function App () {
     setIsModalOpen(false)
   }
 
+  useEffect(() => {
+
+  },[winCondition])
+
   return (
     <div className="App">
-      {isModalOpen&&<Modal onChange={handleOptionChange} closeModal={closeModal} />}
+      {isModalOpen&&<Modal onChange={handleOptionChange} closeModal={closeModal} winCondition={winCondition}/>}
       <main>
         <Header winner={winner} imgUrl={imgUrl} descript={descript}/>
         <article>
