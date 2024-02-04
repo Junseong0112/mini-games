@@ -1,6 +1,4 @@
-
-import "./styles/Header.css";
-
+import "../styles/Header.css";
 
 function Header({ winner, imgUrl, descript }) {
   return (

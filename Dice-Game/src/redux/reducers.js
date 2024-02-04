@@ -1,4 +1,3 @@
-// reducers.js
 import Basic from "../assets/basic.png";
 import Win from "../assets/win.png";
 import Lose from "../assets/lose.png";

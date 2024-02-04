@@ -6,12 +6,12 @@ import {
   setWinCondition,
   openModal,
   closeModal,
-} from "./redux/actions";
+} from "../redux/actions";
 import Board from "./Board";
 import Button from "./Button";
 import Header from "./Header";
 import Modal from "./Modal";
-import "./styles/App.css";
+import "../styles/App.css";
 
 function App() {
   const dispatch = useDispatch();
