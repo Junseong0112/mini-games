@@ -85,8 +85,18 @@ function App() {
           </Button>
         </article>
         <div className="Board-box">
-          <Board name="나" color="orange" gameHistory={myHistory} />
-          <Board name="상대" color="green" gameHistory={otherHistory} />
+          <Board
+            name="나"
+            color="orange"
+            gameHistory={myHistory}
+            winCondition={winCondition}
+          />
+          <Board
+            name="상대"
+            color="green"
+            gameHistory={otherHistory}
+            winCondition={winCondition}
+          />
         </div>
       </main>
     </div>

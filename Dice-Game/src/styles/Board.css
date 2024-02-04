@@ -16,12 +16,9 @@ article > h2 {
 .header-sec > img {
   width: 6.25rem;
 }
-.score-sec > p {
-  font-size: 1rem;
-}
-.history-sec {
+.score-sec {
   min-height: 100px;
 }
-.history-sec > p {
+.score-sec > p {
   font-size: 1rem;
 }
