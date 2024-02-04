@@ -1,28 +1,27 @@
-section{
+section {
   width: 45%;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin: .625rem 0;
-  padding: 1.25rem .9375rem;
+  margin: 0.625rem 0;
+  padding: 1.25rem 0.9375rem;
   border: 1px solid #b1b1b1;
   border-radius: 20px;
-  box-shadow: 0 4px 4px rgba(54, 54, 54, 0.2),
-  0 -2px 2px rgba(90, 90, 90, 0.2);
+  box-shadow: 0 4px 4px rgba(54, 54, 54, 0.2), 0 -2px 2px rgba(90, 90, 90, 0.2);
 }
 article > h2 {
-  margin: 0 0 .625rem;
+  margin: 0 0 0.625rem;
   font-size: 1.125rem;
 }
-.header-sec > img{
+.header-sec > img {
   width: 6.25rem;
 }
-.score-sec > p{
+.score-sec > p {
   font-size: 1rem;
 }
-.history-sec{
+.history-sec {
   min-height: 100px;
 }
-.history-sec > p{
+.history-sec > p {
   font-size: 1rem;
 }
