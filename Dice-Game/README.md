@@ -31,14 +31,16 @@
 
 ---
 
-| JavaScript | React |
-
-|                                                      Redux                                                      |
-| :-------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: | ----------------------------------------------------------------------------------------------------------- |
-| ![javascript](https://github.com/Junseong0112/mini-games/assets/108931006/bc682460-d9fb-4849-b3df-4698b65f2bab) | ![react](https://github.com/Junseong0112/mini-games/assets/108931006/7516e828-9677-4cf6-9323-b481cd9ed9df) | ![redux](https://github.com/Junseong0112/mini-games/assets/108931006/ 55921a46-35ad-4bc6-896c-83366cde5a22) |
+| JavaScript |  React   |  Redux   |
+| :--------: | :------: | :------: |
+|   ![js]    | ![react] | ![redux] |
 
 ## 배포 사이트
 
 ---
 
 <https://dice-options-game.netlify.app/>
+
+[js]: (https://github.com/Junseong0112/mini-games/assets/108931006/bc682460-d9fb-4849-b3df-4698b65f2bab)
+[react]: (https://github.com/Junseong0112/mini-games/assets/108931006/7516e828-9677-4cf6-9323-b481cd9ed9df)
+[redux]: (https://github.com/Junseong0112/mini-games/assets/108931006/55921a46-35ad-4bc6-896c-83366cde5a22)
