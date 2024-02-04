@@ -1,90 +1,50 @@
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  rollDice,
+  clearGame,
+  setWinCondition,
+  openModal,
+  closeModal,
+} from "./redux/actions";
 import Board from "./Board";
 import Button from "./Button";
-import { useEffect, useState } from "react";
-import "./styles/App.css";
 import Header from "./Header";
-import Basic from "./assets/basic.png";
-import Win from "./assets/win.png";
-import Lose from "./assets/lose.png";
 import Modal from "./Modal";
+import "./styles/App.css";
 
-function random(n) {
-  return Math.ceil(Math.random() * n);
-}
 function App() {
-  const [winner, setWinner] = useState("게임에서 이겨보세요!");
-  const [descript, setDescript] = useState("");
-  const [myHistory, setMyHistory] = useState([]);
-  const [otherHistory, setOtherHistory] = useState([]);
-  const [disableClick, setDisableClick] = useState(false);
-  const [imgUrl, setImgUrl] = useState(Basic);
-  const [winCondition, setWinCondition] = useState(0);
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const dispatch = useDispatch();
+  const {
+    winner,
+    descript,
+    myHistory,
+    otherHistory,
+    disableClick,
+    imgUrl,
+    winCondition,
+    isModalOpen,
+  } = useSelector((state) => state);
 
   const handleRollClick = () => {
-    const nextMyNum = random(6);
-    const nextOtherNum = random(6);
-    const myNewHistory = [...myHistory, nextMyNum];
-    const otherNewHistory = [...otherHistory, nextOtherNum];
-    const myNewSum = myNewHistory.reduce((acc, cur) => acc + cur, 0);
-    const otherNewSum = otherNewHistory.reduce((acc, cur) => acc + cur, 0);
-
-    setMyHistory([...myHistory, nextMyNum]);
-    setOtherHistory([...otherHistory, nextOtherNum]);
-
-    if (winCondition === 1) {
-      if (myNewSum >= 50) {
-        setWinner("승리하셨습니다!");
-        setDisableClick(true);
-        setImgUrl(Win);
-      } else if (otherNewSum >= 50) {
-        setWinner("패배하셨습니다!");
-        setDisableClick(true);
-        setImgUrl(Lose);
-      }
-    } else if (winCondition === 2) {
-      if (new Set(myNewHistory).size === 6) {
-        setWinner("승리하셨습니다!");
-        setDisableClick(true);
-        setImgUrl(Win);
-      } else if (new Set(otherNewHistory).size === 6) {
-        setWinner("패배하셨습니다!");
-        setDisableClick(true);
-        setImgUrl(Lose);
-      }
-    }
+    dispatch(rollDice());
   };
 
   const handleClearClick = () => {
-    setMyHistory([]);
-    setOtherHistory([]);
-    setWinner("게임에서 이겨보세요!");
-    setDisableClick(false);
-    setImgUrl(Basic);
+    dispatch(clearGame());
   };
 
   const handleOptionChange = (option) => {
-    setWinCondition(option);
-    setIsModalOpen(false);
-    setDisableClick(false);
-    setMyHistory([]);
-    setOtherHistory([]);
-    setWinner("게임에서 이겨보세요!");
-    setImgUrl(Basic);
-
-    if (option === 1) {
-      setDescript("50점을 먼저 달성하세요");
-    } else if (option === 2) {
-      setDescript("1부터 6까지 먼저 모아보세요");
-    }
+    dispatch(setWinCondition(option));
+    dispatch(closeModal());
   };
 
-  const openModal = () => {
-    setIsModalOpen(true);
+  const handleClickOpenModal = () => {
+    dispatch(openModal());
   };
 
-  const closeModal = () => {
-    setIsModalOpen(false);
+  const handleClickCloseModal = () => {
+    dispatch(closeModal());
   };
 
   useEffect(() => {}, [winCondition]);
@@ -94,7 +54,7 @@ function App() {
       {isModalOpen && (
         <Modal
           onChange={handleOptionChange}
-          closeModal={closeModal}
+          closeModal={handleClickCloseModal}
           winCondition={winCondition}
         />
       )}
@@ -116,7 +76,11 @@ function App() {
           >
             다시하기
           </Button>
-          <Button className="App-button" color="gray" onClick={openModal}>
+          <Button
+            className="App-button"
+            color="gray"
+            onClick={handleClickOpenModal}
+          >
             옵션 선택
           </Button>
         </article>
