@@ -36,11 +36,24 @@ function App() {
     gameBoard[row][col] = player;
   }
 
+  let winner;
+  console.log(gameBoard);
   for (const combination of WINNING_COMBINATIONS) {
-    console.log(combination);
-    // const firstSquareSymbol = gameBoard[]
-    // const secondSquareSymbol
-    // const thirdSquareSymbol
+    const firstSquareSymbol =
+      gameBoard[combination[0].row][combination[0].column];
+    const secondSquareSymbol =
+      gameBoard[combination[1].row][combination[1].column];
+    const thirdSquareSymbol =
+      gameBoard[combination[2].row][combination[2].column];
+
+    // 우승 조건과 같은지 비교
+    if (
+      firstSquareSymbol &&
+      firstSquareSymbol === secondSquareSymbol &&
+      secondSquareSymbol === thirdSquareSymbol
+    ) {
+      winner = firstSquareSymbol;
+    }
   }
 
   const handleSelectSquare = (rowIndex, colIndex) => {
@@ -71,6 +84,7 @@ function App() {
             isActive={activePlayer === "O"}
           />
         </ol>
+        {winner && <p>You Won, {winner}!</p>}
         <GameBoard onSlectSquare={handleSelectSquare} board={gameBoard} />
       </div>
       <Log turns={gameTurns} />
