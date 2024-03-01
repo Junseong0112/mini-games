@@ -1,7 +1,10 @@
+import { useState } from "react";
+
 import Player from "./components/Player";
 import GameBoard from "./components/GameBoard";
-import { useState } from "react";
 import Log from "./components/Log";
+import GameOver from "./components/GameOver.jsx";
+
 import { WINNING_COMBINATIONS } from "./winning-combinations.js";
 
 const initialGameBoard = [
@@ -27,7 +30,7 @@ function App() {
   const activePlayer = deriveActivePlayer(gameTurns);
 
   let gameBoard = initialGameBoard;
-
+  // initial Board 의 값에 gmaeTurns state 값 추가
   for (const turn of gameTurns) {
     // console.log(turn);
     const { square, player } = turn;
@@ -37,7 +40,7 @@ function App() {
   }
 
   let winner;
-  console.log(gameBoard);
+  //  WINNING_COMBINATIONS 승리 조건에 부합되는 배열에 gameBoard 값이 X인지 O인지 확인하기
   for (const combination of WINNING_COMBINATIONS) {
     const firstSquareSymbol =
       gameBoard[combination[0].row][combination[0].column];
@@ -46,7 +49,7 @@ function App() {
     const thirdSquareSymbol =
       gameBoard[combination[2].row][combination[2].column];
 
-    // 우승 조건과 같은지 비교
+    // 우승 조건과 같은지 비교 세개의 상수값이 X 또는 O를 같고 있는지
     if (
       firstSquareSymbol &&
       firstSquareSymbol === secondSquareSymbol &&
@@ -55,7 +58,10 @@ function App() {
       winner = firstSquareSymbol;
     }
   }
+  // 비기기 위한 조건
+  const hasDraw = gameTurns.length === 9 && !winner;
 
+  // rowIndex, colIndex를 이용하여 각 버튼의 square, player 값을 저장
   const handleSelectSquare = (rowIndex, colIndex) => {
     setGameTurns((prevTurns) => {
       const currentPlayer = deriveActivePlayer(prevTurns);
@@ -84,7 +90,8 @@ function App() {
             isActive={activePlayer === "O"}
           />
         </ol>
-        {winner && <p>You Won, {winner}!</p>}
+        {/* 이긴사람이 있거나 비긴사람이 있을 때 보여지는 컴포넌트 */}
+        {(winner || hasDraw) && <GameOver winner={winner} />}
         <GameBoard onSlectSquare={handleSelectSquare} board={gameBoard} />
       </div>
       <Log turns={gameTurns} />
