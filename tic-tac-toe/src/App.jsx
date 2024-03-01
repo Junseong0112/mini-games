@@ -24,6 +24,7 @@ function deriveActivePlayer(gameTurns) {
 }
 
 function App() {
+  const [players, setPlayers] = useState({ X: "Player 1", O: "Player 2" });
   // gameTurns state를 이용하여 GameBoard, Log 컴포넌트에 상태를 업데이트 할 수 있기에 가독성 및 효율적으로 코드를 작성이 가능하다.
   const [gameTurns, setGameTurns] = useState([]);
 
@@ -58,7 +59,8 @@ function App() {
       firstSquareSymbol === secondSquareSymbol &&
       secondSquareSymbol === thirdSquareSymbol
     ) {
-      winner = firstSquareSymbol;
+      // X, O의 값이 아닌 그 값을 가지고 있는 player 이름의 값을 변수에 할당
+      winner = players[firstSquareSymbol];
     }
   }
 
@@ -79,8 +81,19 @@ function App() {
     });
   };
 
+  // 게임 리셋을 위한 로직
   const handleRestart = () => {
     setGameTurns([]);
+  };
+
+  // 게임 플레이어 이름의 데이터를 변경하기 위한 로직
+  const handlePlayerNameChange = (symbol, newName) => {
+    setPlayers((prevPlayers) => {
+      return {
+        ...prevPlayers,
+        [symbol]: newName,
+      };
+    });
   };
 
   return (
@@ -91,11 +104,13 @@ function App() {
             initialName="Player 1"
             symbol="X"
             isActive={activePlayer === "X"}
+            onChangeName={handlePlayerNameChange}
           />
           <Player
             initialName="Player 2"
             symbol="O"
             isActive={activePlayer === "O"}
+            onChangeName={handlePlayerNameChange}
           />
         </ol>
         {/* 이긴사람이 있거나 비긴사람이 있을 때 보여지는 컴포넌트 */}
