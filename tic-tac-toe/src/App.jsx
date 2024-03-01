@@ -29,7 +29,9 @@ function App() {
 
   const activePlayer = deriveActivePlayer(gameTurns);
 
-  let gameBoard = initialGameBoard;
+  // 게임이 끝난 후에 null 값을 가지고있는 새로운 gameboard 판을 만들기 위해 복사를 해서 사용
+  let gameBoard = [...initialGameBoard.map((array) => [...array])];
+
   // initial Board 의 값에 gmaeTurns state 값 추가
   for (const turn of gameTurns) {
     // console.log(turn);
@@ -40,6 +42,7 @@ function App() {
   }
 
   let winner;
+
   //  WINNING_COMBINATIONS 승리 조건에 부합되는 배열에 gameBoard 값이 X인지 O인지 확인하기
   for (const combination of WINNING_COMBINATIONS) {
     const firstSquareSymbol =
@@ -58,6 +61,7 @@ function App() {
       winner = firstSquareSymbol;
     }
   }
+
   // 비기기 위한 조건
   const hasDraw = gameTurns.length === 9 && !winner;
 
@@ -73,6 +77,10 @@ function App() {
 
       return updatedTurns;
     });
+  };
+
+  const handleRestart = () => {
+    setGameTurns([]);
   };
 
   return (
@@ -91,7 +99,9 @@ function App() {
           />
         </ol>
         {/* 이긴사람이 있거나 비긴사람이 있을 때 보여지는 컴포넌트 */}
-        {(winner || hasDraw) && <GameOver winner={winner} />}
+        {(winner || hasDraw) && (
+          <GameOver winner={winner} onRestart={handleRestart} />
+        )}
         <GameBoard onSlectSquare={handleSelectSquare} board={gameBoard} />
       </div>
       <Log turns={gameTurns} />
