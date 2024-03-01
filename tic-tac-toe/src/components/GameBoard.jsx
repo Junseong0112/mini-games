@@ -7,13 +7,13 @@ const initialGameBoard = [
 export default function GameBoard({
   onSlectSquare,
   activePlayerSymbol,
-  truns,
+  turns,
 }) {
   let gameBoard = initialGameBoard;
 
-  for (const trun of truns) {
-    console.log(trun);
-    const { square, player } = trun;
+  for (const turn of turns) {
+    console.log(turn);
+    const { square, player } = turn;
     const { row, col } = square;
 
     gameBoard[row][col] = player;
