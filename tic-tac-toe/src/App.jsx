@@ -16,7 +16,6 @@ function deriveActivePlayer(gameTurns) {
 function App() {
   // gameTurns state를 이용하여 GameBoard, Log 컴포넌트에 상태를 업데이트 할 수 있기에 가독성 및 효율적으로 코드를 작성이 가능하다.
   const [gameTurns, setGameTurns] = useState([]);
-
   const activePlayer = deriveActivePlayer(gameTurns);
 
   const handleSelectSquare = (rowIndex, colIndex) => {
