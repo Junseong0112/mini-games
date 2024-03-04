@@ -1,12 +1,8 @@
 # 가위 바위 보
 
----
-
 ![main-project](https://github.com/Junseong0112/mini-games/assets/108931006/ef084959-6630-4ee1-91a3-231c70e4357a)
 
 # 소개
-
----
 
 틱택토 게임, 한줄을 먼저 채우면 이기는 게임
 
@@ -19,15 +15,11 @@
 
 ## 기술 스택
 
----
-
 |                                                   JavaScript                                                    |                                                   React                                                    |
 | :-------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: |
 | ![javascript](https://github.com/Junseong0112/mini-games/assets/108931006/bc682460-d9fb-4849-b3df-4698b65f2bab) | ![react](https://github.com/Junseong0112/mini-games/assets/108931006/7516e828-9677-4cf6-9323-b481cd9ed9df) |
 
 ## 배포 사이트
-
----
 
 <https://tictactoe-mini-games.netlify.app/>
 
