@@ -50,6 +50,7 @@ const Player: React.FC<Props> = ({
         value={playerName}
         onChange={handleInputChange}
         onKeyUp={handleInputKeyUp}
+        autoFocus
       />
     );
   }
