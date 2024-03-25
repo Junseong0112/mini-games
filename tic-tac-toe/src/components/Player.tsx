@@ -28,8 +28,15 @@ const Player: React.FC<Props> = ({
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPlayerName(e.target.value);
+  };
+
+  const handleInputKeyUp = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      setIsEditing(false);
+      onChangeName(symbol, playerName);
+    }
   };
 
   let editPlayerName = <span className="player-name">{playerName}</span>;
@@ -37,9 +44,14 @@ const Player: React.FC<Props> = ({
 
   if (isEditing) {
     editPlayerName = (
-      <input type="text" required value={playerName} onChange={handleChange} />
+      <input
+        type="text"
+        required
+        value={playerName}
+        onChange={handleInputChange}
+        onKeyUp={handleInputKeyUp}
+      />
     );
-    // btnCaption = 'Save'
   }
 
   return (
