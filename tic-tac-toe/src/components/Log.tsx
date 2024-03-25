@@ -1,4 +1,10 @@
-export default function Log({ turns }) {
+import React from "react";
+
+interface Props {
+  turns: { square: { row: number; col: number }; player: string }[];
+}
+
+const Log: React.FC<Props> = ({ turns }) => {
   return (
     <ol id="log">
       {turns.map((turn) => (
@@ -8,4 +14,6 @@ export default function Log({ turns }) {
       ))}
     </ol>
   );
-}
+};
+
+export default Log;

@@ -1,11 +1,19 @@
+import React from "react";
 import { useState } from "react";
 
-export default function Player({
+interface Props {
+  initialName: string;
+  symbol: string;
+  isActive: boolean;
+  onChangeName: (symbol: string, playerName: string) => void;
+}
+
+const Player: React.FC<Props> = ({
   initialName,
   symbol,
   isActive,
   onChangeName,
-}) {
+}) => {
   const [playerName, setPlayerName] = useState(initialName);
   const [isEditing, setIsEditing] = useState(false);
 
@@ -20,7 +28,7 @@ export default function Player({
     }
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPlayerName(e.target.value);
   };
 
@@ -43,4 +51,6 @@ export default function Player({
       <button onClick={handleEditClick}>{isEditing ? "Save" : "Edit"}</button>
     </li>
   );
-}
+};
+
+export default Player;

@@ -10,7 +10,10 @@ import {
   deriveWinner,
 } from "./helper/helper.js";
 
-const PLAYERS = {
+const PLAYERS: {
+  X: string;
+  O: string;
+} = {
   X: "Player 1",
   O: "Player 2",
 };
@@ -18,7 +21,9 @@ const PLAYERS = {
 function App() {
   const [players, setPlayers] = useState(PLAYERS);
   // gameTurns state를 이용하여 GameBoard, Log 컴포넌트에 상태를 업데이트 할 수 있기에 가독성 및 효율적으로 코드를 작성이 가능하다.
-  const [gameTurns, setGameTurns] = useState([]);
+  const [gameTurns, setGameTurns] = useState<
+    { square: { row: number; col: number }; player: string }[]
+  >([]);
 
   // X, O의 값에 따라 css className 'active' 값을 반환
   const activePlayer = deriveActivePlayer(gameTurns);
@@ -33,7 +38,7 @@ function App() {
   const hasDraw = gameTurns.length === 9 && !winner;
 
   // rowIndex, colIndex를 이용하여 각 버튼의 square, player 값을 저장
-  const handleSelectSquare = (rowIndex, colIndex) => {
+  const handleSelectSquare = (rowIndex: number, colIndex: number) => {
     setGameTurns((prevTurns) => {
       const currentPlayer = deriveActivePlayer(prevTurns);
 
@@ -52,7 +57,7 @@ function App() {
   };
 
   // 게임 플레이어 이름의 데이터를 변경하기 위한 로직
-  const handlePlayerNameChange = (symbol, newName) => {
+  const handlePlayerNameChange = (symbol: string, newName: string) => {
     setPlayers((prevPlayers) => {
       return {
         ...prevPlayers,
@@ -82,7 +87,7 @@ function App() {
         {(winner || hasDraw) && (
           <GameOver winner={winner} onRestart={handleRestart} />
         )}
-        <GameBoard onSlectSquare={handleSelectSquare} board={gameBoard} />
+        <GameBoard onSelectSquare={handleSelectSquare} board={gameBoard} />
       </div>
       <Log turns={gameTurns} />
     </main>

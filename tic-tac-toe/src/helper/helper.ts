@@ -1,12 +1,17 @@
 import { WINNING_COMBINATIONS } from "../winning-combinations";
 
-const INITIAL_GAME_BOARD = [
+interface Turn {
+  square: { row: number; col: number };
+  player: string;
+}
+
+const INITIAL_GAME_BOARD: (string | null)[][] = [
   [null, null, null],
   [null, null, null],
   [null, null, null],
 ];
 
-export function deriveActivePlayer(gameTurns) {
+export function deriveActivePlayer(gameTurns: Turn[]): string {
   let currentPlayer = "X";
 
   if (gameTurns.length > 0 && gameTurns[0].player === "X") {
@@ -16,11 +21,13 @@ export function deriveActivePlayer(gameTurns) {
   return currentPlayer;
 }
 
-export function deriveGameBoard(gameTurns) {
+export function deriveGameBoard(gameTurns: Turn[]): (string | null)[][] {
   // 게임이 끝난 후에 null 값을 가지고있는 새로운 gameboard 판을 만들기 위해 복사를 해서 사용
-  let gameBoard = [...INITIAL_GAME_BOARD.map((array) => [...array])];
+  let gameBoard: (string | null)[][] = [
+    ...INITIAL_GAME_BOARD.map((array) => [...array]),
+  ];
 
-  // initial Board 의 값에 gmaeTurns state 값 추가
+  // initial Board 의 값에 gameTurns state 값 추가
   for (const turn of gameTurns) {
     // console.log(turn);
     const { square, player } = turn;
@@ -32,7 +39,10 @@ export function deriveGameBoard(gameTurns) {
   return gameBoard;
 }
 
-export function deriveWinner(gameBoard, players) {
+export function deriveWinner(
+  gameBoard: (string | null)[][],
+  players: { [key: string]: string }
+): string | undefined {
   let winner;
 
   //  WINNING_COMBINATIONS 승리 조건에 부합되는 배열에 gameBoard 값이 X인지 O인지 확인하기
