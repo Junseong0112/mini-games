@@ -17,6 +17,7 @@ npm run dev
 | ----- | ---------- | ---------- |
 | ![react](https://github.com/Junseong0112/mini-games/assets/108931006/7516e828-9677-4cf6-9323-b481cd9ed9df) | ![javascript](https://github.com/Junseong0112/mini-games/assets/108931006/bc682460-d9fb-4849-b3df-4698b65f2bab) | ![typescript](https://github.com/Junseong0112/mini-games/assets/108931006/12c4e8d9-49a2-4850-92fd-4d41987bebf5) |
 
+
 ## 기능
 
 1. 플레이어 이름 수정
