@@ -9,6 +9,7 @@ import {
   deriveGameBoard,
   deriveWinner,
 } from "./helper/helper.js";
+import Header from "./components/Header";
 
 const PLAYERS: {
   X: string;
@@ -68,6 +69,7 @@ function App() {
 
   return (
     <main>
+      <Header />
       <div id="game-container">
         <ol id="players" className="highlight-player">
           <Player
