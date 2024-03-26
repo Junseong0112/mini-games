@@ -1,5 +1,10 @@
 // 게임 이기는 조건들
-export const WINNING_COMBINATIONS = [
+interface Combination {
+  row : number;
+  column : number;
+}
+
+export const WINNING_COMBINATIONS : Combination[][] = [
   [
     { row: 0, column: 0 },
     { row: 0, column: 1 },
