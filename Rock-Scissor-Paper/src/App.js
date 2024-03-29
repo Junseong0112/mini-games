@@ -25,7 +25,7 @@ function getResult(me, other) {
 function App() {
   const [hand, setHand] = useState(INITIAL_VALUE);
   const [otherHand, setOtherHand] = useState(INITIAL_VALUE);
-  const [gameHistroy, setGameHistory] = useState([]);
+  const [gameHistory, setGameHistory] = useState([]);
   const [score, setScore] = useState(0);
   const [otherScore, setOtherScore] = useState(0);
   const [bet, setBet] = useState(1);
@@ -54,7 +54,7 @@ function App() {
     setOtherHand(nextOtherHand);
 
     // 배열안에 결과값들을 새로운 배열로 반환하기 위해서는 스프레드 구문을이용해서 반환해야함
-    setGameHistory([...gameHistroy, nextHistoryItem])
+    setGameHistory([...gameHistory, nextHistoryItem])
 
     // compareHand에서 1이 나올 경우 기존 스코어 숫자 더하기 input에 있는 value 값을 더함
     if (comparison > 0) setScore (score + bet);
@@ -120,7 +120,7 @@ function App() {
             </div>
             <div className='Borads-result'>
               <h3>승부 기록</h3>
-              <p>{gameHistroy.join(', ')}</p>
+              <p>{gameHistory.join(', ')}</p>
             </div>
           </div>
         </section>
