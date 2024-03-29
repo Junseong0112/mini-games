@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "eslint:recommended",                            // ESLint에서 제공하는 기본 규칙을 사용합니다.
+    "plugin:@typescript-eslint/recommended",         // @typescript-eslint 플러그인에서 제공하는 권장 규칙을 사용합니다.
+    "plugin:react/recommended",                      // React 플러그인에서 제공하는 권장 규칙을 사용합니다.
+    "prettier/@typescript-eslint",                   // @typescript-eslint와 Prettier의 충돌을 방지하기 위한 설정입니다.
+    "plugin:prettier/recommended"                    // Prettier에서 제공하는 권장 규칙을 사용합니다.
+  ],
+  "parser": "@typescript-eslint/parser",              // TypeScript 코드를 파싱하기 위한 파서를 지정합니다.
+  "parserOptions": {
+    "ecmaVersion": 2018,                              // 사용할 ECMAScript 버전을 지정합니다.
+    "sourceType": "module",                           // ECMAScript 모듈 형식을 사용합니다.
+    "ecmaFeatures": {
+      "jsx": true                                     // JSX 문법을 활성화합니다.
+    }
+  },
+  "plugins": ["@typescript-eslint", "react"],        // 사용할 ESLint 플러그인 목록입니다.
+  "rules": {
+    // 프로젝트에 따라 추가적인 ESLint 규칙을 설정할 수 있습니다.
+  }
+}
