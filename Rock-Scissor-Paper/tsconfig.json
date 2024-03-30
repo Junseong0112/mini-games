@@ -4,9 +4,9 @@
     "lib": ["dom", "dom.iterable", "esnext"], // 컴파일러에 포함되어야 하는 라이브러리의 목록
     "allowJs": false, // JavaScript 파일을 컴파일에 포함할지 여부
     "skipLibCheck": true, // 라이브러리 검사 생략 여부
-    "declaration": true /* '.d.ts' 파일 생성 여부. */,
+    "declaration": false /* '.d.ts' 파일 생성 여부. */,
     "strict": true, // 엄격한 타입 검사 여부
-    "outDir": "./dist/" /* 해당 디렉토리로 결과 구조를 보냅니다. */,
+    "outDir": "./dist" /* 해당 디렉토리로 결과 구조를 보냅니다. */,
     "forceConsistentCasingInFileNames": true, // 파일 이름의 대소문자 일관성 강제 여부
     "noEmit": false, // 실제로 JavaScript 파일을 생성하지 않는 옵션
     "esModuleInterop": true, // CommonJS 모듈을 ES6 스타일로 가져오기 위한 호환성 설정
