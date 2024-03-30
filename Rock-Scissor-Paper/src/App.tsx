@@ -13,14 +13,10 @@ import {
 import './styles/App.css'
 import Modal from './components/Modal'
 
-interface HistoryItem {
-  result: string
-}
-
 function App() {
   const [hand, setHand] = useState<string>(INITIAL_VALUE)
   const [otherHand, setOtherHand] = useState<string>(INITIAL_VALUE)
-  const [gameHistory, setGameHistory] = useState<HistoryItem[]>([])
+  const [gameHistory, setGameHistory] = useState<string[]>([])
   const [score, setScore] = useState<number>(0)
   const [otherScore, setOtherScore] = useState<number>(0)
   const [bet, setBet] = useState<number>(1)
@@ -37,9 +33,7 @@ function App() {
     const nextOtherHand: string = generateRandomHand()
 
     // 승리 또는 무승부 또는 패배를 전달 받기위한 함수를 상수에 저장
-    const nextHistoryItem: HistoryItem = {
-      result: getResult(nextHand, nextOtherHand),
-    }
+    const nextHistoryItem: string = getResult(nextHand, nextOtherHand)
 
     // utils.js에 있는 compareHand 함수는 양쪽의 값을 비교했을 때 0 , 1 , -1이 나오는 값을 상수에 저장
     const comparison: number = compareHand(nextHand, nextOtherHand)
