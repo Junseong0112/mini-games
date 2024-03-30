@@ -1,16 +1,16 @@
 import { useState } from 'react'
-import HandButton from './HandButton'
-import Button from './Button'
-import HandIcon from './HandIcon'
-import Score from './Score'
+import HandButton from './components/HandButton'
+import Button from './components/Button'
+import HandIcon from './components/HandIcon'
+import Score from './components/Score'
 import {
   compareHand,
   generateRandomHand,
   getResult,
   INITIAL_VALUE,
-} from './utils'
+} from './utils/utils'
 import './styles/App.css'
-import Modal from './Modal'
+import Modal from './components/Modal'
 
 function App() {
   const [hand, setHand] = useState(INITIAL_VALUE)
