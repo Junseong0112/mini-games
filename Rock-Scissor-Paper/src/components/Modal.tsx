@@ -1,6 +1,11 @@
+import React from 'react'
 import { ModalOverlay, ModalDiv } from 'styles/Global'
 
-function Modal({ closeModal }) {
+interface Props {
+  closeModal: () => void
+}
+
+function Modal({ closeModal }: Props) {
   return (
     <ModalOverlay>
       <ModalDiv>

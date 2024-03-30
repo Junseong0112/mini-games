@@ -1,9 +1,17 @@
+import React from 'react'
 import Reset from './assets/ic-reset.svg'
 
-function Button ({ className, onClick }) {
-  return (
-    <button className={className} onClick={onClick}><img src={Reset} alt='Rest' /></button>
-  )
-};
+interface Props {
+  className: string
+  onClick: () => void
+}
 
-export default Button;
+function Button({ className, onClick }: Props) {
+  return (
+    <button className={className} onClick={onClick}>
+      <img src={Reset} alt="Rest" />
+    </button>
+  )
+}
+
+export default Button

@@ -1,12 +1,18 @@
-import HandIcon from "./HandIcon";
+import React from 'react'
+import HandIcon from './HandIcon'
 import './styles/HandButton.css'
 
-function HandButton ({ value, onClick}) {
-  const handleClick = () => onClick(value);
+interface Props {
+  value: string
+  onClick: (value: string) => void
+}
+
+function HandButton({ value, onClick }: Props) {
+  const handleClick = () => onClick(value)
 
   return (
-    <button className='HandButton' onClick={handleClick}>
-      <HandIcon className='HandButton-icon' value={value} />
+    <button className="HandButton" onClick={handleClick}>
+      <HandIcon className="HandButton-icon" value={value} />
     </button>
   )
 }

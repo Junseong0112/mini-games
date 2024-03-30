@@ -1,6 +1,12 @@
+import React from 'react'
 import { ScoreArticle, ScoreBox } from 'styles/Global'
 
-function Score({ score, otherScore }) {
+interface Props {
+  score: number
+  otherScore: number
+}
+
+function Score({ score, otherScore }: Props) {
   return (
     <ScoreArticle>
       <ScoreBox>
