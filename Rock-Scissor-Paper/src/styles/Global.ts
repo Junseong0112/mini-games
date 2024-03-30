@@ -79,7 +79,9 @@ export const ScoreBox = styled.div`
   justify-content: center;
   gap: 0.625rem;
   border-radius: 20px;
-  box-shadow: inset 0px -2px 5px 1px #ff66b4, 0px 2px 5px #fd69b4;
+  box-shadow:
+    inset 0px -2px 5px 1px #ff66b4,
+    0px 2px 5px #fd69b4;
 
   > h2 {
     font-size: 2rem;

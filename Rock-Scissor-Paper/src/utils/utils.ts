@@ -1,5 +1,5 @@
 // 서로의 초기값이 같아 상수로 따로 저장해 추후에 수정시 용이함
-export const INITIAL_VALUE: string = 'rock'
+export const INITIAL_VALUE = 'rock'
 
 const HANDS: string[] = ['rock', 'scissor', 'paper']
 
