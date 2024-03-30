@@ -1,5 +1,5 @@
 import React from 'react'
-import Reset from './assets/ic-reset.svg'
+import Reset from '../assets/ic-reset.svg'
 
 interface Props {
   className: string

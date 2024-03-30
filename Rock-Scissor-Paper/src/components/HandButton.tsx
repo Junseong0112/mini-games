@@ -1,6 +1,6 @@
 import React from 'react'
 import HandIcon from './HandIcon'
-import './styles/HandButton.css'
+import '../styles/HandButton.css'
 
 interface Props {
   value: string
