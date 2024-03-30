@@ -1,16 +1,20 @@
 // 서로의 초기값이 같아 상수로 따로 저장해 추후에 수정시 용이함
-export const INITIAL_VALUE = 'rock'
+export const INITIAL_VALUE: string = 'rock'
 
-const HANDS = ['rock', 'scissor', 'paper']
+const HANDS: string[] = ['rock', 'scissor', 'paper']
 
-const WINS = {
+interface Wins {
+  [key: string]: string
+}
+
+const WINS: Wins = {
   rock: 'scissor',
   scissor: 'paper',
   paper: 'rock',
 }
 
-export function compareHand(a, b) {
-  // compaerHand(paper, scissor)
+export function compareHand(a: string, b: string): number {
+  // compareHand(paper, scissor)
   // WINS[a] : rock , b : scissor 같지 않으므로 다음 조건
   if (WINS[a] === b) return 1
   // WINS[b] : paper , a : paper 같으므로 -1을 리턴
@@ -18,19 +22,19 @@ export function compareHand(a, b) {
   return 0
 }
 
-function random(n) {
+function random(n: number): number {
   // 0 부터 1사이의 랜덤한수와 3을 곱한값의 소수점 내린 수
   return Math.floor(Math.random() * n)
 }
 
-export function generateRandomHand() {
+export function generateRandomHand(): string {
   // 인덱스는 random 함수의 인자는 배열길이값인 3을 전달받음
-  const idx = random(HANDS.length)
+  const idx: number = random(HANDS.length)
   // Hand[2] 값인 scissor 가 출력
   return HANDS[idx]
 }
 
-export function getResult(me, other) {
+export function getResult(me: string, other: string): string {
   // me : paper , other : scissor
   // utils.js compareHand(paper, scissor)
   const comparison = compareHand(me, other)

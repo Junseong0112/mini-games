@@ -5,7 +5,7 @@ import paperImg from '../assets/paper.svg'
 
 interface Props {
   value: string
-  className: string
+  className?: string
 }
 
 const RANDOMIMGS: {
