@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ESNext", // 컴파일된 JavaScript의 ECMAScript 대상 버전
+    "lib": ["dom", "dom.iterable", "esnext"], // 컴파일러에 포함되어야 하는 라이브러리의 목록
+    "allowJs": false, // JavaScript 파일을 컴파일에 포함할지 여부
+    "skipLibCheck": true, // 라이브러리 검사 생략 여부
+    "declaration": false /* '.d.ts' 파일 생성 여부. */,
+    "strict": true, // 엄격한 타입 검사 여부
+    "outDir": "./dist" /* 해당 디렉토리로 결과 구조를 보냅니다. */,
+    "forceConsistentCasingInFileNames": true, // 파일 이름의 대소문자 일관성 강제 여부
+    "noEmit": false, // 실제로 JavaScript 파일을 생성하지 않는 옵션
+    "esModuleInterop": true, // CommonJS 모듈을 ES6 스타일로 가져오기 위한 호환성 설정
+    "module": "esnext", // 모듈 시스템 (ES6의 경우 esnext)
+    "moduleResolution": "node", // 모듈 해석 방법
+    "resolveJsonModule": true, // JSON 파일 import 가능 여부
+    "isolatedModules": true, // 모든 파일을 독립적으로 컴파일하여 캐시를 최적화하는 옵션
+    "jsx": "react", // JSX 파일의 변환 방법 (React 프로젝트의 경우)
+    "baseUrl": "src"
+  },
+  "include": ["src/**/*", "svg.d.ts"], // 포함될 파일 및 디렉토리 패턴
+  "exclude": ["node_modules"] // 제외될 파일 및 디렉토리 패턴
+}
