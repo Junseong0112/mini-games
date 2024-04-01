@@ -1,9 +1,17 @@
-import Dice from "./Dice";
-import "../styles/Board.css";
+import React from 'react'
+import Dice from './Dice'
+import '../styles/Board.css'
 
-function Board({ name, color, gameHistory, winCondition }) {
-  const num = gameHistory[gameHistory.length - 1] || 1;
-  const sum = gameHistory.reduce((acc, cur) => acc + cur, 0);
+interface Props {
+  name: string
+  color: string
+  gameHistory: number[]
+  winCondition: number
+}
+
+function Board({ name, color, gameHistory, winCondition }: Props) {
+  const num = gameHistory[gameHistory.length - 1] || 1
+  const sum = gameHistory.reduce((acc, cur) => acc + cur, 0)
 
   return (
     <section>
@@ -19,11 +27,11 @@ function Board({ name, color, gameHistory, winCondition }) {
       ) : (
         <article className="score-sec">
           <h2>기록</h2>
-          <p>{gameHistory.join(", ")}</p>
+          <p>{gameHistory.join(', ')}</p>
         </article>
       )}
     </section>
-  );
+  )
 }
 
-export default Board;
+export default Board

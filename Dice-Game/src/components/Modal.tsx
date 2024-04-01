@@ -1,6 +1,12 @@
-import "../styles/Modal.css";
+import React from 'react'
+import '../styles/Modal.css'
 
-function Modal({ closeModal, onChange, winCondition }) {
+interface Props {
+  onChange: (option: number) => void
+  winCondition: number
+}
+
+function Modal({ onChange, winCondition }: Props) {
   return (
     <article className="Modal">
       <div className="Modal-box">
@@ -27,7 +33,7 @@ function Modal({ closeModal, onChange, winCondition }) {
         </ul>
       </div>
     </article>
-  );
+  )
 }
 
-export default Modal;
+export default Modal

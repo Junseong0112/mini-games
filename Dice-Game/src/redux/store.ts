@@ -1,6 +1,10 @@
-import { createStore } from "redux";
-import appReducer from "./reducers";
+import { combineReducers } from 'redux'
+import appReducer from './reducers'
 
-const store = createStore(appReducer);
+const rootReducer = combineReducers({
+  appReducer,
+})
 
-export default store;
+export default rootReducer
+
+export type RootState = ReturnType<typeof rootReducer>
