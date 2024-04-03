@@ -26,7 +26,7 @@ npm run dev
 
 ## 배포
 
-`Netilfy` 이용
+`Netlify` 이용
 
 <https://tictactoe-mini-games.netlify.app/>
 

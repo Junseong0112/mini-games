@@ -30,7 +30,7 @@ npm run start
 
 ## 배포
 
-`Netilfy` 이용
+`Netlify` 이용
 
 <https://rock-scissor-paper-games.netlify.app>
 
