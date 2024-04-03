@@ -6,7 +6,7 @@
 
 ![image](https://github.com/Junseong0112/mini-games/assets/108931006/f71e4b52-1382-49a9-8d6d-e82a29479c37)
 
-## 본 페지
+## 본 페이지
 
 ![image](https://github.com/Junseong0112/mini-games/assets/108931006/894bb501-8277-4ba2-95c1-cf4a589a2490)
 
